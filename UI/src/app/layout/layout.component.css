@@ -1,0 +1,4 @@
+app-sidebar{
+    position: fixed;
+    z-index: 9 !important;
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+	<title>Test App</title>
+  <base href="/">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<meta name="description" content="Responsive Admin Template" />
+	<meta name="author" content="SmartUniversity" />
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css" />
+	
+  <link rel="icon" type="image/x-icon" href="assets/logos/chauffeur.png">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md header-white white-sidebar-color logo-white">
+
+	<script>
+		function googleTranslateElementInit() {
+			new google.translate.TranslateElement({ pageLanguage: 'en' },
+				'google_translate_element'
+			);
+			/*
+			To remove the "powered by google",
+			uncomment one of the following code blocks.
+			NB: This breaks Google's Attribution Requirements:
+			https://developers.google.com/translate/v2/attribution#attribution-and-logos
+		*/
+	
+			// Native (but only works in browsers that support query selector)
+			// if (typeof(document.querySelector) == 'function') {
+			// 	document.querySelector('.goog-logo-link').setAttribute('style', 'display: none');
+			// 	document.querySelector('.goog-te-gadget').setAttribute('style', 'font-size: 0');
+			// }
+	
+			// If you have jQuery - works cross-browser - uncomment this
+			jQuery('.goog-logo-link').css('display', 'none');
+			jQuery('.goog-te-gadget').css('font-size', '0');
+		}
+		</script>
+		<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <app-root></app-root>
+</body>
+</html>

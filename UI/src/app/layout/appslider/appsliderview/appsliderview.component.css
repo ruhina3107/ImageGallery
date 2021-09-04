@@ -1,0 +1,22 @@
+.appslider-img {
+    width: 100px;
+    height: 150px;
+}
+.reset_btn {
+    cursor: pointer;
+}
+
+
+.justify-content-center {
+    display: flex !important;
+    justify-content: center !important;
+    margin-left: 250px!important;
+}
+
+.image{
+    height:40em; background-size:cover; width:auto;
+    background-image:url("C:/Gallery/wikiride-angular/src/assets/black.jfif");
+    background-position:50% 50%;
+    background-size: 100% ;  
+    background-size: cover;  
+  }

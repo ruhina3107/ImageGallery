@@ -1,0 +1,64 @@
+<div class="card card-topline-purple">
+    <div class="card-head">
+        <header>Image Gallery</header>
+        <div class="tools" >
+
+        </div>
+    </div>
+    <div class="card-body">
+      
+        <div class="row">
+          <div class="col-lg-3">
+
+          </div>
+          <div class="col-lg-3">
+
+          </div>
+
+          <div class="col-lg-3">
+
+          </div>
+          <div class="col-lg-3">
+              <div class="text-right">
+                  <a routerLink="/galleryView/Add" class="btn btn-success">ADD IMAGE</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        
+        <div class="row">
+          <div class="col-md-12">
+            <mat-grid-list cols="5" rowHeight="100px">
+              <mat-grid-tile
+                  *ngFor="let r of result  |  paginate: { itemsPerPage: 40, currentPage: 1 };let i = index"
+                  [colspan]="1"
+                  [rowspan]="3"
+                  [style.background]="blue">
+                  <span class="tes-img" *ngIf="r.Image != 'NULL' && r.Image != null && r.Image != ''; else imageelseBlock">
+                    <img class="appslider-img" [src]="r.Image" alt="User face" onerror="this.onerror=null;this.src='../assets/img/user/{i}';">
+                  </span>
+                  <ng-template #imageelseBlock>
+                    <span class="tes-img">
+                      <img src="../assets/img/user.png" alt="User face" height="50" width="50">
+                    </span>
+                  </ng-template>
+                  &nbsp;
+                  <div class="text-bottom">
+                    <a (click)="appsliderdelete(r.Id)" class="btn btn-danger">Delete</a>
+                    </div>
+              </mat-grid-tile>
+              
+            </mat-grid-list>
+            
+          </div>
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+              <!-- <ngb-pagination class="d-flex justify-content-center" [collectionSize]="pages" [(page)]="page" [maxSize]="5" (pageChange)="getAppSliderView($event)"
+                [rotate]="true" [boundaryLinks]="true"></ngb-pagination> -->
+        </div>
+      
+      
+    </div>
+</div>
+
+
+
